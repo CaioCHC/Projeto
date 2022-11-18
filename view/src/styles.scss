@@ -1,1 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@ag-grid-community/all-modules/dist/styles/ag-grid.css";
+
+@import "~@ag-grid-community/all-modules/dist/styles/ag-theme-material.css";
+
+.mt-30 {
+  margin-top: 30px!important;
+}
+
+* {
+  font-family: cursive;
+}
+
+@media (min-width: 600px) {
+  .col-12-form {
+    display: grid;
+    gap: 7.5px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+
+    .span1 {
+      grid-column: span 1;
+    }
+
+    .span2 {
+      grid-column: span 2;
+    }
+
+    .span3 {
+      grid-column: span 3;
+    }
+
+    .span4 {
+      grid-column: span 4;
+    }
+
+    .span5 {
+      grid-column: span 5;
+    }
+
+    .span6 {
+      grid-column: span 6;
+    }
+
+    .span7 {
+      grid-column: span 7;
+    }
+
+    .span8 {
+      grid-column: span 8;
+    }
+
+    .span9 {
+      grid-column: span 9;
+    }
+
+    .span10 {
+      grid-column: span 10;
+    }
+
+    .span11 {
+      grid-column: span 11;
+    }
+
+    .span12 {
+      grid-column: span 12;
+    }
+  }
+}
+
+
+.formfield {
+  width: 100%;
+}
+
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
+  color: #32a1a1;
+  font-size: 20px;
+
+}
+
+.flex-end {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  button {
+    margin-left: 7.5px;
+  }
+}
+
+.gridButton {
+  color: #32a1a1;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  gap:6px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,14 @@
+<div class="row formatoPagina" [style.width.%]="widthPainel">
+  <mat-card>
+    <mat-card-header style="background-color: #abc4e3;">
+      <mat-toolbar class="mat-toolbar-multiple-rows">
+        <mat-toolbar-row>
+          <h1 id="titulo" style="color: #3f51b5;">{{tituloPainel}}</h1>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </mat-card-header>
+    <mat-card-content style="background-color: #c4d1e1;">
+     <router-outlet></router-outlet>
+    </mat-card-content>
+  </mat-card>
+</div>

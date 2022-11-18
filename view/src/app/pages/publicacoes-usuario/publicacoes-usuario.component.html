@@ -1,0 +1,47 @@
+<mat-expansion-panel class="mt-30">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Adicionar Publicação
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <hr style="margin: top 0px;">
+  <form [formGroup]="cadastroPublicacaoForm" (submit)="cadastrarPublicacao()">
+      <div class="col-12-form">
+        <div class="span3">
+          <mat-form-field class="formfield">
+            <mat-label>Título</mat-label>
+            <input type="text" matInput formControlName="tituloCtrl">
+          </mat-form-field>
+        </div>
+
+        <div class="span3">
+          <mat-form-field class="formfield">
+            <mat-label>Gênero</mat-label>
+            <mat-select formControlName="generoCtrl">
+              <mat-option *ngFor="let genero of listaGeneros" [value]="genero">
+                {{genero.descricao}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="span3">
+          <mat-form-field class="formfield">
+            <mat-label>Classificação</mat-label>
+            <mat-select formControlName="classificacaoCtrl">
+              <mat-option *ngFor="let classificacao of listaClassificacoes" [value]="classificacao">
+                {{classificacao.descricao}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="flex-end ">
+        <button id="botao-add-publicacao" mat-raised-button mat-submit color="primary" type="submit">Adicionar</button>
+      </div>
+  </form>
+</mat-expansion-panel>
+<div style="background-color: #3f51b5">
+  <ag-grid-angular class="ag-theme-material mt-30" [gridOptions]="gridOptions" (gridReady)="onGridReady()"></ag-grid-angular>
+
+</div>
